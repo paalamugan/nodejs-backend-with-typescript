@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  mongo:
+    # To create this service, Compose will pull the mongo
+    image: mongo:4.4
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      # The named volume dbdata will persist the data stored in Mongo’s default data directory, /data/db.
+      # This will ensure that you don’t lose data in cases where you stop or remove containers.
+      - dbdata:/data/db
+
+# Our top-level volumes key defines the volumes dbdata.
+# When Docker creates volumes, the contents of the volume are stored in a part of the host filesystem, /var/lib/docker/volumes/, that’s managed by Docker.
+# The contents of each volume are stored in a directory under /var/lib/docker/volumes/ and get mounted to any container that uses the volume.
+# In this way, the data that our users will create will persist in the dbdata volume even if we remove and recreate the db container.
+volumes:
+  dbdata:
