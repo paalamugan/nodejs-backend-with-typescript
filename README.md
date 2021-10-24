@@ -523,9 +523,9 @@ This all happens in memory when you run the tests, so there are no output `.js` 
 Simply run `npm run test`.
 Note this will also generate a coverage report.
 
-### Writing tests
+<!-- ### Writing tests
 Writing tests for web apps has entire books dedicated to it and best practices are strongly influenced by personal style, so I'm deliberately avoiding discussing how or when to write tests in this guide.
-However, if prescriptive guidance on testing is something that you're interested in, [let me know](https://www.surveymonkey.com/r/LN2CV82), I'll do some homework and get back to you.
+However, if prescriptive guidance on testing is something that you're interested in, [let me know](https://www.surveymonkey.com/r/LN2CV82), I'll do some homework and get back to you. -->
 
 ## ESLint
 ESLint is a code linter which mainly helps catch quickly minor code quality and style issues.
